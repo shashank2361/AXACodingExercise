@@ -15,7 +15,7 @@ namespace AXACodingExercise.Test
         }
 
         [TestCase("BANG")]
-        public void Given_the_input_BANG_has_matching_records_It_should_return_list_of_matching_strings(string searchString)
+        public void GivenInput_BANG_asparam_WhenSearchiscalled_ThenItshould_return_list_of_matching_strings(string searchString)
         {
            var expectedResult = new List<string>() { "BANGUI","BANGKOK","BANGALORE"};
            var expectedCharacter = new List<char>() {'U','K','A'};
@@ -30,7 +30,7 @@ namespace AXACodingExercise.Test
         }
 
         [TestCase("LA")]
-        public void Given_the_input_LA_has_matching_records_It_should_return_list_of_matching_strings(string searchString)
+        public void GivenInput_LA_asparam_WhenSearchiscalled_ThenItshouldreturn_list_of_matching_strings(string searchString)
         {   
             var expectedResult = new List<string>() { "LA PAZ", "LA PLATA", "LAGOS"  };
             var expectedCharacter = new List<char>() { ' ', 'G' };
@@ -45,7 +45,7 @@ namespace AXACodingExercise.Test
         }
 
         [TestCase("ZE")]
-        public void Given_the_input_ZE_doesnot_has_matching_records_It_should_not_return_no_results(string searchString)
+        public void GivenInput_ZE_asparam_WhenSearchiscalled_ThenItshouldnot_return_results(string searchString)
         {
             ICityFinder cityFinder = new CityFinder(cities);
             ICityResult searchResult = cityFinder.Search(searchString);
